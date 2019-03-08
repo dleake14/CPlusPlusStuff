@@ -1,0 +1,163 @@
+#include <iostream>
+#include <string>
+#include <iomanip>
+#include <stdlib.h>
+
+using namespace std;
+
+int main(){
+    int down =1;
+    int distance =10;
+    string first = "st";
+    string second = "nd";
+    string third = "rd";
+    string forth = "th";
+    string abv;
+    string gainOrLoss;
+    string of;
+    int gainLoss;
+    string ballOn = "       Ball is on the ";
+    string sideOf;
+    int ballSpot;
+    int newBallSpot =0;
+    if(down == 1){
+               abv = first;
+    cout << down << abv << " and " << distance << endl;
+               }
+    if(down == 2){
+               abv = second;
+               }
+    if(down == 3){
+               abv = third;
+             }
+    if(down == 4){
+               abv = forth;
+               }
+   cout << "What is current spot of ball?" << endl;
+   cin >> sideOf;
+   cin >> ballSpot;
+   while (down<=4 ){  
+   cout << "What happened on last play? " <<endl;
+   cout << "new ball spot is " << newBallSpot << endl;
+   cin >> gainOrLoss; 
+   cin >> of;
+   cin >> gainLoss;  
+     if (gainOrLoss == "punt"){
+                    cout << "End Of Possession" <<endl;
+                   getchar();
+                   getchar();
+                  goto begin;
+                  }  
+    if (gainOrLoss == "turnover"){
+                    cout << "End Of Possession" <<endl;
+                   getchar();
+                   getchar();
+                  goto begin;
+                  }
+   if(gainOrLoss == "loss"){
+                newBallSpot = ballSpot + gainLoss;
+                 if (newBallSpot > 50){
+                         newBallSpot = newBallSpot - 50;
+                         newBallSpot = 50 - newBallSpot;
+                         sideOf == "+";
+                         cout << newBallSpot << "New ball if >= distance and crosses 50 " <<endl;
+                         system("pause");     
+                         }
+                 distance = distance + gainLoss;
+                 down = down +1;
+                    if(down == 1){
+                               abv = first;                
+                               }
+                    if(down == 2){
+                               abv = second;               
+                               }
+                    if(down == 3){
+                               abv = third;                
+                               }
+                    if(down == 4){
+                               abv = forth;               
+                               }                                                         
+                               }             
+   if(gainOrLoss == "gain" && gainLoss < distance){
+                 
+                 newBallSpot = ballSpot + gainLoss;
+                       newBallSpot = ballSpot + gainLoss;
+                 if (newBallSpot > 50){
+                         newBallSpot = newBallSpot - 50;
+                         newBallSpot = 50 - newBallSpot;
+                         sideOf == "+";
+                         cout << newBallSpot << "New ball if < distance and crosses 50 " <<endl;
+                         system("pause");     
+                         }
+                 distance = distance - gainLoss;
+                 down = down +1;                            
+                    if(down == 1){
+                               abv = first;
+                               }
+                    if(down == 2){
+                               abv = second;
+                               }
+                    if(down == 3){
+                               abv = third;
+                               }
+                    if(down == 4){
+                               abv = forth;
+                               } 
+                               }         
+   else if(gainOrLoss == "gain" && gainLoss >= distance){
+                 begin:
+                 newBallSpot = ballSpot + gainLoss;
+                 if (newBallSpot > 50){
+                         newBallSpot = newBallSpot - 50;
+                         newBallSpot = 50 - newBallSpot;
+                         sideOf == "+";
+                         cout << newBallSpot << "New ball if >= distance and crosses 50 " <<endl;
+                         system("pause");     
+                         }
+                 down =1;
+                 distance =10;
+                   if(down == 1){
+                               abv = first;
+                               }
+                    if(down == 2){
+                               abv = second;
+                               }
+                    if(down == 3){
+                               abv = third;
+                               }
+                    if(down == 4){
+                               abv = forth;
+                               }      
+                               }       
+//   if(gainOrLoss == "gain"||"fumble"||"int"){
+//                 down =1;
+//                 distance =10;
+//                   if(down == 1){
+//                               abv = first;
+//                               }
+//                    if(down == 2){
+//                               abv = second;
+//                               }
+//                    if(down == 3){
+//                               abv = third;
+//                               }
+//                    if(down == 4){
+//                               abv = forth;
+//                               }      
+//                               }         
+    if (down <=4){
+               //system("cls");
+               cout << down << abv << " and " << distance <<ballOn << sideOf << newBallSpot << endl;     
+               }                            
+    else {
+                   cout << "End Of Possession" <<endl;
+                   getchar();
+                   getchar();
+                   goto begin;
+                   }        
+}  
+
+    return 0;
+}
+
+

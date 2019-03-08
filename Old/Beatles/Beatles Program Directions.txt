@@ -1,0 +1,56 @@
+There is a file of Beatles albums on the internet.  Each entry has the
+following form:
+
+  Name of album
+  Year released
+  from 1 to 30 names of songs (in cut number order)
+  An album separator line is made up of equal signs
+
+Your assignment is:
+
+  for each album:
+
+    1. read in the Album Name, Year and songs
+    2. Sort the songs alphabetically
+
+  for all albums:
+
+    1. Sort the albums by Album Name alphabetically
+    2. Print the Album Name, Date, and the list of songs (alphabetically)
+
+ Click here to see the Input File  
+
+
+Some Sample Output: 
+
+Magical Mystery Tour
+Year:  1967 
+11. All You Need Is Love
+10. Baby You're a Rich Man
+ 4. Blue Jay Way
+ 3. Flying
+ 7. Hello Goodbye
+ 6. I Am the Walrus
+ 1. Magical Mystery Tour
+ 9. Penny Lane
+ 8. Strawberry Fields Forever
+ 2. The Fool on the Hill
+ 5. Your Mother Should Knowa
+
+
+Notes:
+
+  You will need to use the string operators and methods provided by C++.
+  Here are a few.
+
+    #include 
+ 
+    // determine the number of characters in a string 
+    st.size()   or    st.length()
+ 
+    // substring search 
+    poe = datastring.find("="); 
+ 
+    // picking off a substring
+    ss = st.substr(start, length);
+ 

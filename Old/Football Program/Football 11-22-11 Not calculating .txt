@@ -1,0 +1,243 @@
+#include <iostream>
+#include <string>
+#include <iomanip>
+#include <stdlib.h>
+
+using namespace std;
+
+int main(){
+    int down =1;
+    int distance =10;
+    string first = "st";
+    string second = "nd";
+    string third = "rd";
+    string forth = "th";
+    string abv;
+    string gainOrLoss;
+    string of;
+    int ballOn;
+    int ballOnOut;
+    string ballSign;
+    int gainLoss;
+    if(down == 1){
+               abv = first;
+    cout << down << abv << " and " << distance << endl;
+               }
+    if(down == 2){
+               abv = second;
+               }
+    if(down == 3){
+               abv = third;
+             }
+    if(down == 4){
+               abv = forth;
+               }
+   cout << "What yardline is the ball on?" <<endl;
+   cin >> ballSign;
+   cin >> ballOn;
+   if (ballSign =="+"){
+                ballOn = 50 - ballOn;
+                ballOn = 50 + ballOn;
+                }
+   while (down<=4 ){  
+   cout << "What happened on last play? " <<endl;
+   cin >> gainOrLoss; 
+   cin >> of;
+   cin >> gainLoss;  
+     if (gainOrLoss == "punt"){
+                    cout << "End Of Possession" <<endl;
+                   getchar();
+                   getchar();
+                  goto begin;
+                  }  
+    if (gainOrLoss == "turnover"){
+                    cout << "End Of Possession" <<endl;
+                   getchar();
+                   getchar();
+                  goto begin;
+                  }
+   if(gainOrLoss == "loss"){
+             
+             
+             
+                  ballOn = ballOn - gainLoss;
+                  if (ballSign =="-"){
+                            ballOnOut = ballOn - gainLoss;
+                           cout << ballOn << " -ballOn " << ballOnOut << " -ballOut " << "    IF loss in - territory"<< endl
+                           << distance <<endl;
+                // system("pause");
+                            }
+                 if (ballSign =="+" && gainLoss > ballOn -50){
+                            ballOnOut = ballOn + gainLoss;
+                            ballSign ="-";
+                            
+                          //  cout << ballOn << " -ballOn " << ballOnOut << " -ballOut " << "    IF ball sign is now + and < dist"<< endl
+                         //   << distance <<endl;
+                // system("pause");
+                            }
+                 if (ballSign =="+" && gainLoss < ballOn -50){
+                              ballOnOut = ballOn - gainLoss;
+                              ballOnOut = ballOn - 50;
+                              ballOnOut = 50 - ballOnOut;
+                            //  cout << ballOn << " -ballOn " << ballOnOut << " -ballOut " << "    loss in + territoy but goal 2 go"<< endl
+                            //  << distance <<endl;
+                // system("pause");  
+                              if (ballOnOut <=10){
+                                          distance = ballOnOut;
+                               //   cout << ballOn << " -ballOn " << ballOnOut << " -ballOut " << "    loss in + "<< endl<< distance <<endl;
+                // system("pause");        
+                                  }
+                                  else {
+                                       distance = distance + gainLoss;
+                                       cout << distance <<endl;
+                                       }
+                                  }
+             
+                 
+                 down = down +1;
+                    if(down == 1){
+                               abv = first;                
+                               }
+                    if(down == 2){
+                               abv = second;               
+                               }
+                    if(down == 3){
+                               abv = third;                
+                               }
+                    if(down == 4){
+                               abv = forth;               
+                               }                                                         
+                               }             
+if(gainOrLoss == "gain" && gainLoss < distance){
+                 
+                 ballOn = ballOn + gainLoss;
+                 cout << ballOn << " -ballOn" << ballOnOut << " -ballOut" << endl;
+                // system("pause");
+                            if (ballSign =="-" && ballOn > 50){
+                            ballOnOut = ballOn - 50;
+                            ballOnOut = 50 - ballOnOut;
+                            ballSign = "+";
+                          // cout << ballOn << " -ballOn " << ballOnOut << " -ballOut " << "    IF"<< endl << distance <<endl;
+                 //system("pause");
+                            }
+                             if (ballSign =="+" && ballOn > 50){
+                            ballOnOut = ballOn - 50;
+                            ballOnOut = 50 - ballOnOut;
+                            if (ballOnOut <=10 && distance <=10){
+                                          distance = distance - gainLoss;
+                                        // cout << ballOn << " -ballOn " << ballOnOut << " -ballOut " << "    IF ball sign is now check40+ and < dist"<< endl<< distance <<endl;
+                // system("pause");
+                                          }
+                                           if (ballSign =="+" && ballOn > 50){
+                            ballOnOut = ballOn - 50;
+                            ballOnOut = 50 - ballOnOut;
+                            if (ballOnOut <=10 && distance >=10){
+                                          down=1;
+                                          distance = ballOnOut;
+                                          }
+                           // cout << ballOn << " -ballOn " << ballOnOut << " -ballOut " << "    IF ball sign is now check90+ and < dist"<< endl<< distance <<endl;
+                 //system("pause");
+                            }
+                            }
+                 else {
+                      ballOn = ballOn + gainLoss;
+                      ballOnOut = 50 -ballOn;
+                     //cout << ballOn << " -ballOn " << ballOnOut << " -ballOut   " << "    ELSE"<< endl << distance <<endl;
+                      }
+                
+                 
+                 down = down +1;                            
+                    if(down == 1){
+                               abv = first;
+                               }
+                    if(down == 2){
+                               abv = second;
+                               }
+                    if(down == 3){
+                               abv = third;
+                               }
+                    if(down == 4){
+                               abv = forth;
+                               } 
+                               }         
+   else if(gainOrLoss == "gain" && gainLoss >= distance){
+                 begin:
+                 cout << ballOnOut << "check gain > dist" << " " << ballOn <<endl;
+                  system ("pause");
+                  ballOnOut = ballOn + gainLoss;
+                  cout << ballOnOut << "check ballOnOut gain > "<< ballSign << " ballSign " <<endl;
+                  system ("pause");
+                 //cout << ballOn << " -ballOn" << ballOnOut << " -ballOut" << endl;
+                 //system("pause");
+                 if (ballSign =="-" && gainLoss > 50-ballOn){
+                            cout << ballOnOut << "check > with ballSign of - " <<endl;
+                            cout << "Ball on out is " << ballOnOut << "ball on is " << ballOn <<endl;
+                            ballOn = ballOn - 50;
+                           cout << ballOnOut << "ballOnOut here " <<endl;
+                            ballOnOut = 50 - ballOnOut;
+                           cout << ballOnOut << "ballOnOut here again" <<endl;
+                            ballSign = "+";
+                            cout << ballOnOut << "checkthis should happen " <<endl;
+                            //cout << ballOn << " -ballOn " << ballOnOut << " -ballOut " << "    IF"<< "  " << ballSign << endl;
+                 //system("pause");
+                            }
+                 if (ballSign =="+" && ballOn > 50){
+                            ballOnOut = ballOn - 50;
+                            ballOnOut = 50 - ballOnOut;
+                            cout << "does it get here " <<endl;
+                            system("pause");
+                            cout << ballOn << " -ballOn " << ballOnOut << " -ballOut " << "    IF ball sign is now + and < dist"<< endl;
+                  
+                 system("pause");
+                            }
+                
+                 else {
+                      cout << ballOnOut << "check0090" <<endl;
+                  system ("pause");
+                      ballOnOut = ballOn + gainLoss;
+                      cout << "pumkin" <<endl;
+                      //cout << ballOn << " -ballOn " << ballOnOut << " -ballOut   " << "    ELSE"<< "  " << ballSign <<endl;
+                      }
+                 
+                 
+                 down =1;
+                 if(ballSign =="+" && ballOnOut < 10){
+                             distance = ballOnOut;
+                             
+                             cout << ballOn << " -ballOn " << ballOnOut << " -ballOut " << "    IF ball sign + and ballout < 10"<< endl<< distance <<endl;
+                 system("pause");
+                             }
+                             else{
+                 distance =10;
+                 cout << "pumkin" <<endl;
+                 }
+                   if(down == 1){
+                               abv = first;
+                               }
+                    if(down == 2){
+                               abv = second;
+                               }
+                    if(down == 3){
+                               abv = third;
+                               }
+                    if(down == 4){
+                               abv = forth;
+                               }      
+                               }       
+        
+    if (down <=4){
+               //system("cls");
+               cout << down << abv << " and " << distance << "     ball is on the " << ballSign << ballOnOut << endl;     
+               }                            
+    else {
+                   cout << "End Of Possession" <<endl;
+                   getchar();
+                   getchar();
+                   goto begin;
+                   }        
+}  
+
+    return 0;
+}
+
+

@@ -1,0 +1,25 @@
+﻿Build started 9/7/2012 4:04:01 PM.
+     1>Project "C:\Users\David\Documents\School\Fall 2012\Programming II\Problem Solver\Problem Solver\Problem Solver.vcxproj" on node 2 (build target(s)).
+     1>PrepareForBuild:
+         Creating directory "C:\Users\David\Documents\School\Fall 2012\Programming II\Problem Solver\Release\".
+       InitializeBuildStatus:
+         Creating "Release\Problem Solver.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt source.cpp
+         source.cpp
+     1>source.cpp(39): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\David\Documents\School\Fall 2012\Programming II\Problem Solver\Release\Problem Solver.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\Problem Solver.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\David\Documents\School\Fall 2012\Programming II\Problem Solver\Release\Problem Solver.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\David\Documents\School\Fall 2012\Programming II\Problem Solver\Release\Problem Solver.lib" /MACHINE:X86 Release\source.obj
+         Generating code
+         Finished generating code
+         Problem Solver.vcxproj -> C:\Users\David\Documents\School\Fall 2012\Programming II\Problem Solver\Release\Problem Solver.exe
+       Manifest:
+         c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\David\Documents\School\Fall 2012\Programming II\Problem Solver\Release\Problem Solver.exe;#1" /manifest "Release\Problem Solver.exe.intermediate.manifest"
+       FinalizeBuildStatus:
+         Deleting file "Release\Problem Solver.unsuccessfulbuild".
+         Touching "Release\Problem Solver.lastbuildstate".
+     1>Done Building Project "C:\Users\David\Documents\School\Fall 2012\Programming II\Problem Solver\Problem Solver\Problem Solver.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.02
