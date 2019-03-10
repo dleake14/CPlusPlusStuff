@@ -1,8 +1,1 @@
-﻿  Football-Main.cpp
-m:\c++ stuff\2019\football 2019\football-main\football-main\football-main.cpp(200): warning C4102: 'deftouchdown': unreferenced label
-m:\c++ stuff\2019\football 2019\football-main\football-main\football-main.cpp(364): warning C4102: 'defsaf': unreferenced label
-m:\c++ stuff\2019\football 2019\football-main\football-main\football-main.cpp(446): warning C4102: 'fgcheckdef': unreferenced label
-m:\c++ stuff\2019\football 2019\football-main\football-main\football-main.cpp(13): warning C4101: 'nhome': unreferenced local variable
-m:\c++ stuff\2019\football 2019\football-main\football-main\football-main.cpp(78): warning C4101: 'cc': unreferenced local variable
-m:\c++ stuff\2019\football 2019\football-main\football-main\football-main.cpp(12): warning C4101: 'naway': unreferenced local variable
-  Football-Main.vcxproj -> M:\C++ Stuff\2019\FOOTBALL 2019\Football-Main\Debug\Football-Main.exe
+﻿  Football-Main.vcxproj -> M:\C++\2019\FOOTBALL 2019\Football-Main\Debug\Football-Main.exe
