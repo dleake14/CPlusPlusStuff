@@ -24,7 +24,7 @@ invalidAway:
 	}
 invalidHome:
 	system("cls");
-	cout << "\n\n\n\n\n\n\n\n\n\nWho is the home team?" << endl;
+	cout << "\n\nWho is the home team?" << endl;
 	cin.getline(home, 35);
 	int hsize = 0;
 	for (hsize = 0; home[hsize] != NULL; hsize++);
