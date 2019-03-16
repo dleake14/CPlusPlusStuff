@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "M:/Code/C++/2019/firstCLion/cmake-build-debug/CMakeFiles/firstCLion.dir/embed.manifest"
