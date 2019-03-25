@@ -1,0 +1,4 @@
+﻿  toLowerCase.cpp
+M:\Code\C++\2019\toLowerCase\toLowerCase.cpp(11): warning C4018: '<': signed/unsigned mismatch
+M:\Code\C++\2019\toLowerCase\toLowerCase.cpp(26): warning C4018: '<': signed/unsigned mismatch
+  toLowerCase.vcxproj -> M:\Code\C++\2019\toLowerCase\Debug\toLowerCase.exe
