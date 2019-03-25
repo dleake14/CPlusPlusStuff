@@ -4,6 +4,8 @@
 
 using namespace std;
 
+//Solution as a class instead of just a method
+
 class Solution {
 public:
 	string toLowerCase(string str) {
